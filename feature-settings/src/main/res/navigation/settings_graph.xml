@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_graph"
+    app:startDestination="@id/settingsFlowFirstFragment">
+
+    <fragment
+        android:id="@+id/settingsFlowSecondFragment"
+        android:name="com.example.feature_settings.SettingsFlowSecondFragment"
+        android:label="SettingsFlowSecondFragment">
+        <action
+            android:id="@+id/action_settingsFlowSecondFragment_to_settingsFlowThirdFragment"
+            app:destination="@id/settingsFlowThirdFragment" />
+        <action
+            android:id="@+id/action_settingsFlowSecondFragment_to_buy_flow_graph"
+            app:destination="@+id/buy_flow_graph">
+            <argument
+                android:name="popToDestinationId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFlowThirdFragment"
+        android:name="com.example.feature_settings.SettingsFlowThirdFragment"
+        android:label="SettingsFlowThirdFragment">
+        <argument
+            android:name="settings_name"
+            android:defaultValue=""
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://www.example.com/settings/{settings_name}" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFlowFirstFragment"
+        android:name="com.example.feature_settings.SettingsFlowFirstFragment"
+        android:label="SettingsFlowFirstFragment">
+        <action
+            android:id="@+id/action_settingsFlowFirstFragment_to_settingsFlowSecondFragment"
+            app:destination="@id/settingsFlowSecondFragment" />
+    </fragment>
+
+</navigation>

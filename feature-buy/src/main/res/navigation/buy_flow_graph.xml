@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/buy_flow_navigation"
+    app:startDestination="@+id/buyScreenFirstFragment">
+
+    <fragment
+        android:id="@id/buyScreenFirstFragment"
+        android:name="com.example.feature_buy.BuyScreenFirstFragment"
+        android:label="BuyScreenFirstFragment" >
+        <action
+            android:id="@+id/action_buyScreenFirstFragment_to_buyScreenSecondFragment"
+            app:destination="@id/buyScreenSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyScreenSecondFragment"
+        android:name="com.example.feature_buy.BuyScreenSecondFragment"
+        android:label="BuyScreenSecondFragment" >
+        <action
+            android:id="@+id/action_buyScreenSecondFragment_to_buyScreenThirdFragment"
+            app:destination="@id/buyScreenThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyScreenThirdFragment"
+        android:name="com.example.feature_buy.BuyScreenThirdFragment"
+        android:label="BuyScreenThirdFragment" />
+
+</navigation>

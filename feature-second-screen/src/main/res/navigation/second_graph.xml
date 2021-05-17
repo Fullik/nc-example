@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/second_graph"
+    app:startDestination="@id/secondStartFragment">
+
+    <fragment
+        android:id="@+id/secondStartFragment"
+        android:name="com.example.feature_second_screen.SecondStartFragment"
+        android:label="SecondStartFragment" >
+        <action
+            android:id="@+id/action_secondStartFragment_to_profile_graph"
+            app:destination="@id/profile_graph" />
+    </fragment>
+
+
+    <include app:graph="@navigation/profile_graph" />
+
+
+</navigation>

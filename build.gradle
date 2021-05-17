@@ -1,0 +1,78 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: "dependencies.gradle"
+    ext {
+        versions.kotlin = '1.4.32'
+        versions.kotlin = '1.4.32'
+        versions.kotlin = '1.4.32'
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${versions.gradle}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+subprojects {
+    if (project.name == "app") {
+        apply plugin: 'com.android.application'
+    } else {
+        apply plugin: 'com.android.library'
+    }
+    apply plugin: 'kotlin-android'
+    apply plugin: 'androidx.navigation.safeargs'
+
+    android {
+        compileSdkVersion 30
+        buildToolsVersion "30.0.3"
+
+        defaultConfig {
+            minSdkVersion 21
+            targetSdkVersion 30
+            versionCode 1
+            versionName "1.0"
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        kotlinOptions {
+            jvmTarget = '1.8'
+        }
+    }
+
+    dependencies {
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+        implementation "androidx.core:core-ktx:${versions.coreKtx}"
+        implementation "androidx.appcompat:appcompat:${versions.appCompat}"
+        implementation "com.google.android.material:material:${versions.material}"
+        implementation "androidx.constraintlayout:constraintlayout:${versions.constraint}"
+        implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+        implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+        testImplementation "junit:junit:${versions.junit}"
+        androidTestImplementation "androidx.test.ext:junit:${versions.junit_ext}"
+        androidTestImplementation "androidx.test.espresso:espresso-core:${versions.espresso}"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

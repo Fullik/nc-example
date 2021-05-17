@@ -1,0 +1,9 @@
+include ':feature-second-screen'
+include ':feature-profile'
+include ':feature-login'
+include ':feature-settings'
+include ':feature-buy'
+include ':feature-frw'
+include ':shared'
+include ':app'
+rootProject.name = "Navigation Component Test Project"

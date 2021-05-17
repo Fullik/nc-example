@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.nctest.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/frwRootFragment"
+        android:name="com.example.feature_frw.FrwRootFragment"
+        android:label="fragment_buy_screen"
+        tools:layout="@layout/fragment_frw_root" >
+        <argument
+            android:name="is_start_frw"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <activity
+        android:id="@+id/secondActivity"
+        android:name="com.example.feature_second_screen.SecondActivity"
+        android:label="SecondActivity" />
+
+    <include app:graph="@navigation/settings_graph"/>
+</navigation>
