@@ -13,17 +13,18 @@
         android:id="@+id/frwRootFragment"
         android:name="com.example.feature_frw.FrwRootFragment"
         android:label="fragment_buy_screen"
-        tools:layout="@layout/fragment_frw_root" >
+        tools:layout="@layout/fragment_frw_root">
         <argument
             android:name="is_start_frw"
-            app:argType="boolean"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            app:argType="boolean" />
     </fragment>
 
     <activity
         android:id="@+id/secondActivity"
         android:name="com.example.feature_second_screen.SecondActivity"
-        android:label="SecondActivity" />
+        android:label="SecondActivity"
+        tools:layout="@layout/activity_second" />
 
-    <include app:graph="@navigation/settings_graph"/>
+    <include app:graph="@navigation/settings_graph" />
 </navigation>

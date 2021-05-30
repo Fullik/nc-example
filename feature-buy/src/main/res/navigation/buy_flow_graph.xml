@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/buy_flow_navigation"
     app:startDestination="@+id/buyScreenFirstFragment">
 
     <fragment
         android:id="@id/buyScreenFirstFragment"
         android:name="com.example.feature_buy.BuyScreenFirstFragment"
-        android:label="BuyScreenFirstFragment" >
+        android:label="BuyScreenFirstFragment"
+        tools:layout="@layout/fragment_buy_screen_first">
         <action
             android:id="@+id/action_buyScreenFirstFragment_to_buyScreenSecondFragment"
             app:destination="@id/buyScreenSecondFragment" />
@@ -15,7 +17,8 @@
     <fragment
         android:id="@+id/buyScreenSecondFragment"
         android:name="com.example.feature_buy.BuyScreenSecondFragment"
-        android:label="BuyScreenSecondFragment" >
+        android:label="BuyScreenSecondFragment"
+        tools:layout="@layout/fragment_buy_screen_second">
         <action
             android:id="@+id/action_buyScreenSecondFragment_to_buyScreenThirdFragment"
             app:destination="@id/buyScreenThirdFragment" />
@@ -23,6 +26,7 @@
     <fragment
         android:id="@+id/buyScreenThirdFragment"
         android:name="com.example.feature_buy.BuyScreenThirdFragment"
-        android:label="BuyScreenThirdFragment" />
+        android:label="BuyScreenThirdFragment"
+        tools:layout="@layout/fragment_buy_screen_third" />
 
 </navigation>

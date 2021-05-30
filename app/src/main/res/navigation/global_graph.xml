@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/global_graph"
     app:startDestination="@id/mainHostFragment">
 
-    <fragment android:id="@+id/frwRootFragment"
+    <fragment
+        android:id="@+id/frwRootFragment"
         android:name="com.example.feature_frw.FrwRootFragment"
-        android:label="FrwRootFragment">
+        android:label="FrwRootFragment"
+        tools:layout="@layout/fragment_frw_root">
 
-        <action android:id="@id/action_frwCompleteFragment_to_mainFragment"
+        <action
+            android:id="@id/action_frwCompleteFragment_to_mainFragment"
             app:destination="@id/mainHostFragment"
-            app:popUpTo="@id/global_graph"/>
+            app:popUpTo="@id/global_graph" />
     </fragment>
 
     <fragment
         android:id="@+id/mainHostFragment"
         android:name="com.example.nctest.MainHostFragment"
-        android:label="MainHostFragment" />
+        android:label="MainHostFragment"
+        tools:layout="@layout/fragment_main_host" />
 
 
-    <include app:graph="@navigation/buy_flow_graph"/>
+    <include app:graph="@navigation/buy_flow_graph" />
 
     <action
         android:id="@+id/action_global_buy_flow_navigation"
