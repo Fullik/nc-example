@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/frw_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frw_graph"
     app:startDestination="@id/frwFirstStepFragment">
 
     <fragment
         android:id="@+id/frwFirstStepFragment"
         android:name="com.example.feature_frw.FrwFirstStepFragment"
-        android:label="FrwFirstStepFragment" >
+        android:label="FrwFirstStepFragment"
+        tools:layout="@layout/fragment_frw_first_step">
         <action
             android:id="@+id/action_frwFirstStepFragment_to_frwSecondStepFragment"
             app:destination="@id/frwSecondStepFragment" />
@@ -18,7 +21,8 @@
     <fragment
         android:id="@+id/frwSecondStepFragment"
         android:name="com.example.feature_frw.FrwSecondStepFragment"
-        android:label="FrwSecondStepFragment" >
+        android:label="FrwSecondStepFragment"
+        tools:layout="@layout/fragment_frw_second_step">
         <action
             android:id="@+id/action_frwSecondStepFragment_to_frwThirdStepFragment"
             app:destination="@id/frwThirdStepFragment" />
@@ -30,7 +34,8 @@
     <fragment
         android:id="@+id/frwThirdStepFragment"
         android:name="com.example.feature_frw.FrwThirdStepFragment"
-        android:label="FrwThirdStepFragment" >
+        android:label="FrwThirdStepFragment"
+        tools:layout="@layout/fragment_frw_third_step">
         <action
             android:id="@+id/action_frwThirdStepFragment_to_frwCompleteFragment"
             app:destination="@id/frwCompleteFragment" />
@@ -42,7 +47,8 @@
     <fragment
         android:id="@+id/frwCompleteFragment"
         android:name="com.example.feature_frw.FrwCompleteFragment"
-        android:label="FrwCompleteFragment" >
+        android:label="FrwCompleteFragment"
+        tools:layout="@layout/fragment_frw_complete">
         <action
             android:id="@+id/action_frwCompleteFragment_to_frwFirstStepFragment"
             app:destination="@id/frwFirstStepFragment"

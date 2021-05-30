@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class LoginResultDialogFragment : DialogFragment() {
+class LoginResultDialogFragment : BottomSheetDialogFragment() {
 
     private val args: LoginResultDialogFragmentArgs by navArgs()
 
