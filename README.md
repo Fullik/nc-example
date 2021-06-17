@@ -23,4 +23,4 @@
 <img src="./gifs/deeplink.gif" width="480" height="640" />
 
 # Deeplink after frw
-<img src="./gifs/deeplink_after_frw.gif" width="480" height="640" />
+<img src="./gifs/deeplink_after_frw.gif" width="420" height="640" />
